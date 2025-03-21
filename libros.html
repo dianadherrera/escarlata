@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Libros | Mi Biblioteca Personal</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Mi Biblioteca Personal</h1>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="libros.html" class="active">Libros</a></li>
+                <li><a href="poemas.html">Poemas</a></li>
+                <li><a href="newsletter.html">Newsletter</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="page-header">
+            <h2>Catálogo de Lecturas</h2>
+            <p>Un registro cronológico de los libros que he leído, con notas personales y reflexiones.</p>
+        </section>
+        
+        <section class="filters">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Buscar por título o autor...">
+                <button id="searchBtn">Buscar</button>
+            </div>
+            <div class="filter-options">
+                <select id="filterGenre">
+                    <option value="">Todos los géneros</option>
+                </select>
+                <select id="filterYear">
+                    <option value="">Todos los años</option>
+                </select>
+                <select id="filterRating">
+                    <option value="">Todas las valoraciones</option>
+                    <option value="5">★★★★★</option>
+                    <option value="4">★★★★☆</option>
+                    <option value="3">★★★☆☆</option>
+                    <option value="2">★★☆☆☆</option>
+                    <option value="1">★☆☆☆☆</option>
+                </select>
+            </div>
+        </section>
+        
+        <section class="books-grid" id="booksContainer">
+            <!-- Books will be loaded here dynamically from the CSV -->
+            <div class="loading">Cargando lecturas...</div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 · Mi Biblioteca Personal</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/libros.js"></script>
+</body>
+</html>

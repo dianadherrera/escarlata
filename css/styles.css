@@ -1,0 +1,423 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.7;
+    color: #2a2a2a;
+    background-color: #fcfcfa;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: #9b6a6c;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s, color 0.3s;
+}
+
+a:hover {
+    text-decoration: none;
+    border-bottom: 1px solid #9b6a6c;
+    color: #7a4749;
+}
+
+/* Header & Navigation */
+header {
+    background-color: transparent;
+    padding: 2.5rem 0 1.5rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #e0e0df;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: normal;
+    color: #9b6a6c;
+    letter-spacing: 0.5px;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    color: #666;
+    font-size: 1rem;
+    padding: 0.2rem 0;
+    border-bottom: none;
+}
+
+.menu a:hover, .menu a.active {
+    color: #9b6a6c;
+    border-bottom: 1px solid #9b6a6c;
+}
+
+/* Main content */
+main {
+    margin: 2rem 0;
+}
+
+/* Hero section */
+.hero {
+    text-align: left;
+    padding: 3rem 0;
+    margin-bottom: 3rem;
+    border-left: 3px solid #a5d8d6;
+    padding-left: 2rem;
+    background: linear-gradient(90deg, rgba(165, 216, 214, 0.1) 0%, rgba(165, 216, 214, 0) 100%);
+}
+
+.hero h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+    color: #548e8c;
+    font-weight: normal;
+    line-height: 1.3;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+/* Feature cards */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+.feature-card {
+    background-color: #fcfcfa;
+    border: 1px solid #e0e0df;
+    padding: 1.8rem;
+    text-align: left;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #e9b7b9, #a5d8d6);
+}
+
+.feature-card:hover {
+    border-color: #a5d8d6;
+}
+
+.feature-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #9b6a6c;
+    font-weight: normal;
+}
+
+.feature-card p {
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: transparent;
+    color: #9b6a6c;
+    padding: 0.5rem 0;
+    font-weight: normal;
+    border-bottom: 1px solid #9b6a6c;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.btn:hover {
+    color: #7a4749;
+    border-color: #7a4749;
+    text-decoration: none;
+}
+
+/* Page header */
+.page-header {
+    text-align: left;
+    margin-bottom: 3rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e0e0df;
+}
+
+.page-header h2 {
+    font-size: 2rem;
+    color: #548e8c;
+    margin-bottom: 0.8rem;
+    font-weight: normal;
+}
+
+.page-header p {
+    color: #666;
+    max-width: 700px;
+}
+
+/* Filters */
+.filters {
+    margin-bottom: 3rem;
+    background-color: #fcfcfa;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #e0e0df;
+}
+
+.search-container {
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+#searchInput {
+    flex: 1;
+    padding: 0.7rem;
+    border: 1px solid #e0e0df;
+    font-size: 1rem;
+    background-color: #fcfcfa;
+}
+
+#searchBtn {
+    background-color: #9b6a6c;
+    color: white;
+    border: none;
+    padding: 0 1.5rem;
+    font-weight: normal;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#searchBtn:hover {
+    background-color: #7a4749;
+}
+
+.filter-options {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.filter-options select {
+    padding: 0.5rem;
+    border: 1px solid #e0e0df;
+    background-color: #fcfcfa;
+    min-width: 150px;
+    color: #666;
+}
+
+/* Books grid */
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 2.5rem;
+}
+
+.book-card {
+    background-color: #fcfcfa;
+    border: 1px solid #e0e0df;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.book-card:hover {
+    border-color: #a5d8d6;
+}
+
+.book-cover {
+    height: 220px;
+    background-color: #f7f7f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    border-bottom: 1px solid #e0e0df;
+    font-style: italic;
+}
+
+.book-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.book-info {
+    padding: 1.5rem;
+}
+
+.book-title {
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin-bottom: 0.8rem;
+    color: #9b6a6c;
+    line-height: 1.3;
+}
+
+.book-author {
+    color: #666;
+    margin-bottom: 0.8rem;
+    font-style: italic;
+}
+
+.book-rating {
+    color: #e9b7b9;
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.1rem;
+}
+
+.book-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-top: 1.2rem;
+}
+
+.book-tag {
+    background-color: #f7f7f5;
+    color: #548e8c;
+    font-size: 0.8rem;
+    padding: 0.3rem 0.7rem;
+    border: 1px solid #e0e0df;
+}
+
+/* Loading indicator */
+.loading {
+    text-align: center;
+    padding: 3rem 0;
+    color: #666;
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    text-align: left;
+    padding: 2rem 0;
+    border-top: 1px solid #e0e0df;
+    color: #999;
+    margin-top: 5rem;
+    font-size: 0.9rem;
+}
+
+/* Additional minimalist styles */
+.poem {
+    margin-bottom: 4rem;
+    max-width: 650px;
+}
+
+.poem h3 {
+    font-size: 1.4rem;
+    color: #9b6a6c;
+    margin-bottom: 0.5rem;
+    font-weight: normal;
+}
+
+.poem-author {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.poem-content {
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.poem-reflection {
+    border-left: 3px solid #a5d8d6;
+    padding-left: 1.5rem;
+    color: #666;
+}
+
+.poem-reflection h4 {
+    color: #548e8c;
+    margin-bottom: 0.8rem;
+    font-weight: normal;
+}
+
+/* Newsletter form styles */
+.newsletter-form {
+    max-width: 650px;
+    margin-bottom: 4rem;
+    border: 1px solid #e0e0df;
+    padding: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #666;
+}
+
+.form-group input, 
+.form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #e0e0df;
+    background-color: #fcfcfa;
+}
+
+.submit-btn {
+    background-color: #9b6a6c;
+    color: white;
+    padding: 0.8rem 1.8rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #7a4749;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body {
+        padding: 0 1rem;
+    }
+    
+    .hero {
+        padding-left: 1.5rem;
+    }
+    
+    .menu {
+        gap: 1rem;
+    }
+    
+    .filter-options {
+        flex-direction: column;
+    }
+}

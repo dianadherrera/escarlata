@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter | Mi Biblioteca Personal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.7;
+            color: #2a2a2a;
+            background-color: #fcfcfa;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: #9b6a6c;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s, color 0.3s;
+        }
+
+        a:hover {
+            text-decoration: none;
+            border-bottom: 1px solid #9b6a6c;
+            color: #7a4749;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: transparent;
+            padding: 2.5rem 0 1.5rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #e0e0df;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: normal;
+            color: #9b6a6c;
+            letter-spacing: 0.5px;
+        }
+
+        .menu {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .menu a {
+            color: #666;
+            font-size: 1rem;
+            padding: 0.2rem 0;
+            border-bottom: none;
+        }
+
+        .menu a:hover, .menu a.active {
+            color: #9b6a6c;
+            border-bottom: 1px solid #9b6a6c;
+        }
+
+        /* Main content */
+        main {
+            margin: 2rem 0;
+        }
+
+        /* Page header */
+        .page-header {
+            text-align: left;
+            margin-bottom: 3rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #e0e0df;
+        }
+
+        .page-header h2 {
+            font-size: 2rem;
+            color: #548e8c;
+            margin-bottom: 0.8rem;
+            font-weight: normal;
+        }
+
+        .page-header p {
+            color: #666;
+            max-width: 700px;
+        }
+
+        /* Newsletter form styles */
+        .newsletter-form {
+            max-width: 650px;
+            margin-bottom: 4rem;
+            border: 1px solid #e0e0df;
+            padding: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #666;
+        }
+
+        .form-group input, 
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #e0e0df;
+            background-color: #fcfcfa;
+        }
+
+        .form-group small {
+            display: block;
+            margin-top: 0.4rem;
+            font-size: 0.85rem;
+            color: #888;
+        }
+
+        .checkbox {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .checkbox input {
+            width: auto;
+        }
+
+        .submit-btn {
+            background-color: #9b6a6c;
+            color: white;
+            padding: 0.8rem 1.8rem;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #7a4749;
+        }
+
+        /* Newsletter benefits */
+        .newsletter-benefits {
+            margin-top: 3rem;
+            max-width: 650px;
+        }
+
+        .newsletter-benefits h3 {
+            font-size: 1.4rem;
+            color: #548e8c;
+            margin-bottom: 1rem;
+            font-weight: normal;
+        }
+
+        .newsletter-benefits p {
+            color: #666;
+        }
+
+        /* Footer */
+        footer {
+            text-align: left;
+            padding: 2rem 0;
+            border-top: 1px solid #e0e0df;
+            color: #999;
+            margin-top: 5rem;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            body {
+                padding: 0 1rem;
+            }
+            
+            .menu {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Mi Biblioteca Personal</h1>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="libros.html">Libros</a></li>
+                <li><a href="poemas.html">Poemas</a></li>
+                <li><a href="newsletter.html" class="active">Newsletter</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h2>Correspondencia Literaria</h2>
+            <p>Suscríbete para recibir reflexiones mensuales sobre libros, fragmentos de poemas y recomendaciones de lectura.</p>
+        </section>
+        
+        <section class="newsletter-form">
+            <form id="subscribeForm">
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="preferences">Intereses Literarios</label>
+                    <select id="preferences" name="preferences" multiple>
+                        <option value="fiction">Narrativa</option>
+                        <option value="poetry">Poesía</option>
+                        <option value="essay">Ensayo</option>
+                        <option value="philosophy">Filosofía</option>
+                        <option value="classics">Clásicos</option>
+                    </select>
+                    <small>Ctrl/Cmd + clic para selección múltiple</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="frequency">Frecuencia</label>
+                    <select id="frequency" name="frequency">
+                        <option value="monthly" selected>Mensual</option>
+                        <option value="bimonthly">Bimestral</option>
+                        <option value="quarterly">Trimestral</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <div class="checkbox">
+                        <input type="checkbox" id="agree" name="agree" required>
+                        <label for="agree">Acepto recibir correos con contenido literario y reflexiones.</label>
+                    </div>
+                </div>
+                
+                <button type="submit" class="submit-btn">Suscribirme</button>
+            </form>
+        </section>
+        
+        <section class="newsletter-benefits">
+            <h3>Sobre esta Correspondencia</h3>
+            <p>Cada envío es una cuidadosa selección de ideas y textos que han sido importantes para mí. No se trata de una newsletter comercial, sino de un intercambio genuino sobre el arte de leer y pensar.</p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 · Mi Biblioteca Personal</p>
+    </footer>
+
+    <script>
+        // Simple form handling for demo purposes
+        document.getElementById('subscribeForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('¡Gracias por suscribirte! En un sitio real, esto enviaría los datos a un servidor.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
