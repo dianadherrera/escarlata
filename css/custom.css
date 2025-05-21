@@ -1,0 +1,63 @@
+:root {
+    /* Set sans-serif & mono fonts */
+    --sans-font:
+        -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
+        "Nimbus Sans L", Roboto, "Noto Sans", "Segoe UI", Arial, Helvetica,
+        "Helvetica Neue", sans-serif;
+    --mono-font:
+        Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    --standard-border-radius: 5px;
+
+    /* Default (light) theme */
+
+    --global-background: #dad7cd;
+    --b-high: #43423e;
+    --b-med: #c2c1bb;
+    --b-low: #e5e3dc;
+    --b-inv: #eb3f48;
+
+    --f-high: #696861;
+    --f-med: #ffffff;
+    --f-low: #b3b2ac;
+    --f-inv: #43423e;
+
+    --bg: var(--global-background);
+    --accent-bg: var(--f-med);
+    --text: var(--f-high);
+    --text-light: var(--f-high);
+    --accent: var(--b-inv);
+    --accent-hover: var(--b-inv);
+    --accent-text: var(--f-med);
+    --code: #d81b60;
+    --preformatted: #444;
+    --marked: #ffdd33;
+    --disabled: #efefef;
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --global-background: #29272b;
+        --b-high: #000000;
+        --b-med: #201e21;
+        --b-low: #322e33;
+        --b-inv: #e47464;
+
+        --f-high: #ffffff;
+        --f-med: #e47464;
+        --f-low: #66606b;
+        --f-inv: #000000;
+
+        color-scheme: dark;
+        --bg: var(--global-background);
+        --accent-bg: var(--b-low);
+        --text: var(--f-high);
+        --text-light: var(--f-high);
+        --accent: var(--b-inv);
+        --accent-hover: var(--b-inv);
+        --accent-text: var(--f-high);
+        --code: #f06292;
+        --preformatted: #ccc;
+        --disabled: #111;
+    }
+}
